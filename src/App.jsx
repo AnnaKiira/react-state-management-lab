@@ -6,7 +6,7 @@ const App = () => {
   const [totalAgility, setTotalAgility] = useState(0);
   const [team, setTeam] = useState([]);
   const [money, setMoney] = useState(100);
-  const [zombieFighters] = useState([
+  const [zombieFighters] = useState([ //have completely missed that I didn't set zombiefighters. Realized I missed it during review!
     {
       name: 'Survivor',
       price: 12,
@@ -79,7 +79,7 @@ const App = () => {
     },
   ]);
 
-  let totalTeamStrength = team.reduce((previousStrength, currentStrength) => {
+  const totalTeamStrength = team.reduce((previousStrength, currentStrength) => {
   return previousStrength + currentStrength.added - currentStrength.removed; }, 0);
 
   const handleAddFighter = (zombieFighter) => {
